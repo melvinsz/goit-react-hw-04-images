@@ -52,7 +52,7 @@ const App = () => {
       )
         .then(response => response.json())
         .then(data => {
-          setImage(prevState => [...prevState.images, ...data.hits]);
+          setImage(prevState => [...prevState, ...data.hits]);
           setPage(prevState => prevState + 1);
           setLoading(false);
         })
